@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1476356791'); /* IE9*/
-  src: url('iconfont.eot?t=1476356791#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1476356791') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1476356791') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1476356791#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1476412536'); /* IE9*/
+  src: url('iconfont.eot?t=1476412536#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1476412536') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1476412536') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1476412536#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -16,3 +16,5 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .icon-queding:before { content: "\e61f"; }
+.icon-xiugai:before { content: "\e688"; }
+.icon-queding1:before { content: "\e619"; }

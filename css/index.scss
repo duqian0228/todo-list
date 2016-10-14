@@ -53,13 +53,19 @@ body{
 	content: "\e627";
 }
 .icon-jishiben::before {
-	content: "\e650";
+	content: "";
+	display:inline-block;
 	font-size:20px;
+	width:15px;
+	height:15px;
+	border-radius:50%;
+	border:2px solid #ff6700;
+}
+.icon-xiugai::after {
+	content: "\e688";
 }
 .icon-guanbigongjulan::after {
 	content: "\e61a";
-	float:right;
-	margin-right:34px;
 	color:red;
 	font-size:10px;
 	font-family:"icon-font" ;
@@ -67,10 +73,17 @@ body{
 .icon-queding::after {
 	content: "\e61f";
 }
+.icon-queding1::before {
+	content: "\e619";
+	font-size:22px;
+	border-radius:50%;
+	color:#ff6700;
+	line-height:1.5rem;
+	margin-right:-5px;
+	font-family:"queding";
+}
 .complete::after{
 	content:"\e65c";
-	float:right;
-	margin-right:30px;
 	color:green;
 	font-size:20px;
 	font-family:"icon-font" ;
@@ -212,7 +225,7 @@ $guide-height:(1:2.5rem,
 				box-sizing:border-box;
 				padding:0 15px 0 5px;
 				color:#ccc;
-				font-size:14px;
+				font-size:16px;
 				.top-guide{
 					width:0;
 					height:0;
@@ -227,6 +240,52 @@ $guide-height:(1:2.5rem,
 				p{
 					float:right;
 					font-size:12px;
+					height:1.34rem;
+				}
+				.bianji{
+					color:#ccc;
+					font-size:14px;
+					width:60px;
+					&.nactive{
+						color:#999;
+					}
+					span{
+						margin-left:5px;
+						position:relative;
+						color:#999;
+						&.noquan::before{
+							content: "";
+							position:absolute;
+							top:0;
+							bottom:0;
+							margin:auto;
+							font-size:20px;
+							width:15px;
+							height:15px;
+							border-radius:50%;
+							border:2px solid #999;
+						}
+						&.quanxuan::before{
+							content: "";
+							position:absolute;
+							top:0;
+							bottom:0;
+							margin:auto;
+							font-size:20px;
+							width:15px;
+							height:15px;
+							border-radius:50%;
+							border:2px solid #ff6700;
+						}
+						&.active::before{
+							content: "\e619";
+							font-size:22px;
+							border-radius:50%;
+							color:#ff6700;
+							font-family:"queding";
+							position:absolute;
+						}
+					}
 				}
 			}
 			.inner-contents{
@@ -239,9 +298,10 @@ $guide-height:(1:2.5rem,
 					box-sizing:border-box;
 					border-bottom:1px dashed #ccc;
 					line-height:1.5rem;
-					padding:0 6px;
+					padding:0 10px;
 					background: #E7F1F3;
 					font-family:"font-semi","微软雅黑";
+					font-size:18px;
 					&.delete-inner{
 					    font-family:"font-semi","微软雅黑";
 						width:100%;
@@ -258,9 +318,23 @@ $guide-height:(1:2.5rem,
 						&.title{
 							width:4.5rem;
 							height:1.5rem;
+							font-size:23px;
 						}
+						&.icons{
+							width:0.8rem;
+							height:1.5rem;
+							font-family:"queding";
+							text-align:center;
+							font-size:20px;
+							margin-left:3px;
+						}
+
 					}
 				}
+			}
+			&.inner-list-today{
+				position:fixed;
+				bottom:6.6rem;
 			}
 			&.inner-list-sure{
 				position:fixed;
@@ -297,6 +371,7 @@ $guide-height:(1:2.5rem,
 			border-radius:30px;
 			box-sizing:border-box;
 			padding:0 12px;
+			outline:none;
 		}
 		.button{
 			width:1.1rem;
@@ -313,13 +388,12 @@ $guide-height:(1:2.5rem,
 
 @for $i from 1 through 12 {
 	.inner-content.delete:nth-child(#{$i}){
-		animation:xiaoshi .8s ease $i*0.2s both ;
+		animation:xiaoshi .4s ease $i*0.05s both ;
 	}
 }
 
 @keyframes xiaoshi {
 	0%{transform:translate3d(0,0,0)}
-	50%{transform:translate3d(-50%,0,0)}
 	100%{transform:translate3d(-100%,0,0)}
 }
 @keyframes input-show {
