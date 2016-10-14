@@ -1,0 +1,340 @@
+@import "mixin";
+@mixin useRem($design-size){
+	$media-size:320px,360px,375px,380px,412px,414px,750px,$design-size;
+	@each $size in $media-size{
+		@media screen and (min-width:#{$size}){
+			html{
+				font-size:100px * $size/$design-size;
+			}
+		}
+	}
+}
+@include useRem(1080px);
+@font-face{
+	font-family:"font-semi";
+	src:url(../font/myriad-set-pro_semibold.woff);
+}
+@font-face {
+	font-family:"icon-font";
+	src:url(../iconfont/iconfont.woff);
+}
+@font-face{
+  font-family:"queding";
+  src:url(../iconfont1/iconfont.woff);
+}
+body{
+	font-size:16px;
+	margin:0;
+	padding:0;
+	font-family:"font-semi";
+}
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.icon-font{
+	font-family:"icon-font";
+}
+.icon-duigou::before {
+	content: "\e65c";
+}
+.icon-shengyushijian::before {
+	content: "\e603";
+}
+.icon-quanbu::before {
+	content: "\e8a0";
+}
+.icon-rili::before {
+	content: "\f0025";
+}
+.icon-tianjia::before {
+	content: "\e627";
+}
+.icon-jishiben::before {
+	content: "\e650";
+	font-size:20px;
+}
+.icon-guanbigongjulan::after {
+	content: "\e61a";
+	float:right;
+	margin-right:34px;
+	color:red;
+	font-size:10px;
+	font-family:"icon-font" ;
+}
+.icon-queding::after {
+	content: "\e61f";
+}
+.complete::after{
+	content:"\e65c";
+	float:right;
+	margin-right:30px;
+	color:green;
+	font-size:20px;
+	font-family:"icon-font" ;
+}
+.header{
+	height:3rem;
+	background:#E1675A;
+	position:relative;
+	z-index:1;
+	.add{
+		@include yuanxing(2rem);
+		@include juzhong();
+		margin-top:2rem;
+		background: #e13529;
+		box-shadow:1px 1px 6px -3px #000;
+		line-height:2rem;
+		text-align:center;
+		font-size:0.8rem;
+		color: #ccc;
+		z-index:100;
+		&.add-show{
+			animation:opacity-show .4s ease both;
+		}
+		&.add-none{
+			animation:opacity-none .4s ease both;
+		}
+	}
+	.header-list{
+		width:5.4rem;
+		height:100%;
+		float:left;
+		padding:25px 18px;
+		box-sizing:border-box;
+		&.header-mylist{
+			p{
+				font-family:"font-semi";
+			}
+			.icons{
+				width:4rem;
+				height:0.6rem;
+				margin-top:10px;
+				.icon{
+					width:33.33%;
+					height:100%;
+					border-right:1px solid #ccc;
+					box-sizing:border-box;
+					float:left;
+					line-height:0.6rem;
+					.icon-font{
+						margin:0 2px 0 2px;
+					}
+				}
+				.icon-duigou{
+					color:green;
+				}
+				.icon-shengyushijian{
+					color:red;
+				}
+				.icon-today{
+					border:0;
+				}
+			}
+		}
+		&.header-date{
+			font-family:"font-semi";
+			.icon-rili{
+				float:right;
+				font-size:24px;
+			}
+			span{
+				line-height:73px;
+				margin-left:22px;
+				font-size:17px;
+			}
+		}
+	}
+}
+$guide-height:(1:2.5rem,
+				2:0.77rem,
+				3:7.5rem,
+				4:0.77rem,
+                5:1.57rem,
+				6:0.77rem,
+				7:2.3rem
+);
+.inner{
+	height:16.18rem;
+	background:#363D45;
+	padding:0 25px;
+	box-sizing:border-box;
+	.inner-guides{
+		width:2px;
+		margin-left:5px;
+		float:left;
+		.inner-guide{
+			background:#666;
+			&.icon-font{
+				width:0.77rem;
+				background:#363D45;
+				position:relative;
+				left:-0.35rem;
+				line-height:0.77rem;
+				text-align:center;
+				font-size:18px;
+			}
+          &.inner-guide-today{
+            color: #35fff7;
+          }
+			&.inner-guide-sure{
+				color:green;
+			}
+			&.inner-guide-remain{
+				color:red;
+			}
+		}
+		@each $height in map_keys($guide-height){
+			li:nth-child(#{$height}){
+				height:map_get($guide-height,$height);
+			}
+		}
+	}
+	.inner-lists{
+		width:8rem;
+		height:100%;
+		float:right;
+		padding-top:45px;
+		box-sizing:border-box;
+		.inner-list{
+
+			p{
+				color:#666;
+			}
+			.top{
+				width:8rem;
+				height:1.34rem;
+				background: #22272D;
+				position:relative;
+				line-height:1.34rem;
+				box-sizing:border-box;
+				padding:0 15px 0 5px;
+				color:#ccc;
+				font-size:14px;
+				.top-guide{
+					width:0;
+					height:0;
+					border:8px solid transparent;
+					border-right-color:#22272D;
+					position: absolute;
+					left: -16px;
+					top: 0;
+					bottom: 0;
+					margin: auto 0;
+				}
+				p{
+					float:right;
+					font-size:12px;
+				}
+			}
+			.inner-contents{
+				height:6rem;
+				background: #E7F1F3;
+				overflow:hidden;
+				position:relative;
+				.inner-content{
+					height:1.5rem;
+					box-sizing:border-box;
+					border-bottom:1px dashed #ccc;
+					line-height:1.5rem;
+					padding:0 6px;
+					background: #E7F1F3;
+					font-family:"font-semi","微软雅黑";
+					&.delete-inner{
+					    font-family:"font-semi","微软雅黑";
+						width:100%;
+						position:absolute;
+						bottom:0;
+						font-size:12px;
+						text-align:center;
+						border-top:1px solid #ccc;
+					}
+					div{
+						float:left;
+						height:0.44rem;
+						padding-right:5px;
+						&.title{
+							width:4.5rem;
+							height:1.5rem;
+						}
+					}
+				}
+			}
+			&.inner-list-sure{
+				position:fixed;
+				bottom:4.3rem;
+			}
+			&.inner-list-remain{
+				position:fixed;
+				bottom:2.1rem;
+			}
+		}
+	}
+}
+.add-list{
+	width:100%;
+	height:16.18rem;
+  	background:#ccc;
+	position:fixed;
+	top:3rem;
+	transform:translate3d(0,-100%,0);
+	&.add-list-show{
+		animation:input-show .4s ease both;
+	}
+	&.add-list-none{
+		animation:input-none .4s ease both;
+	}
+	.add-box{
+		height:1.5rem;
+		input{
+			font-size:20px;
+			width:83%;
+			height:1.05rem;
+			margin:0.23rem 0.2rem;
+			border:1px solid #999;
+			border-radius:30px;
+			box-sizing:border-box;
+			padding:0 12px;
+		}
+		.button{
+			width:1.1rem;
+			height:1.5rem;
+			float:right;
+			font-size:1.2rem;
+			margin-right:7px;
+			font-family:"queding";
+			line-height:1.5rem;
+			color: #444444;
+		}
+	}
+}
+
+@for $i from 1 through 12 {
+	.inner-content.delete:nth-child(#{$i}){
+		animation:xiaoshi .8s ease $i*0.2s both ;
+	}
+}
+
+@keyframes xiaoshi {
+	0%{transform:translate3d(0,0,0)}
+	50%{transform:translate3d(-50%,0,0)}
+	100%{transform:translate3d(-100%,0,0)}
+}
+@keyframes input-show {
+	 0%{transform:translate3d(0,-100%,0)}
+	 100%{transform:translate3d(0,0,0)}
+ }
+@keyframes input-none {
+	0%{transform:translate3d(0,0,0)}
+	100%{transform:translate3d(0,-100,0)}
+}
+@keyframes opacity-none {
+	0%{opacity:1}
+	100%{opacity:0}
+}
+@keyframes opacity-show {
+	0%{opacity:0}
+	100%{opacity:1}
+}

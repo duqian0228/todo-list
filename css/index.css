@@ -1,0 +1,515 @@
+@charset "UTF-8";
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 29.62963px;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 33.33333px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 34.72222px;
+  }
+}
+
+@media screen and (min-width: 380px) {
+  html {
+    font-size: 35.18519px;
+  }
+}
+
+@media screen and (min-width: 412px) {
+  html {
+    font-size: 38.14815px;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 38.33333px;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 69.44444px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  html {
+    font-size: 100px;
+  }
+}
+
+@font-face {
+  font-family: "font-semi";
+  src: url(../font/myriad-set-pro_semibold.woff);
+}
+
+@font-face {
+  font-family: "icon-font";
+  src: url(../iconfont/iconfont.woff);
+}
+
+@font-face {
+  font-family: "queding";
+  src: url(../iconfont1/iconfont.woff);
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: "font-semi";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.icon-font {
+  font-family: "icon-font";
+}
+
+.icon-duigou::before {
+  content: "\e65c";
+}
+
+.icon-shengyushijian::before {
+  content: "\e603";
+}
+
+.icon-quanbu::before {
+  content: "\e8a0";
+}
+
+.icon-rili::before {
+  content: "\f0025";
+}
+
+.icon-tianjia::before {
+  content: "\e627";
+}
+
+.icon-jishiben::before {
+  content: "\e650";
+  font-size: 20px;
+}
+
+.icon-guanbigongjulan::after {
+  content: "\e61a";
+  float: right;
+  margin-right: 34px;
+  color: red;
+  font-size: 10px;
+  font-family: "icon-font";
+}
+
+.icon-queding::after {
+  content: "\e61f";
+}
+
+.complete::after {
+  content: "\e65c";
+  float: right;
+  margin-right: 30px;
+  color: green;
+  font-size: 20px;
+  font-family: "icon-font";
+}
+
+.header {
+  height: 3rem;
+  background: #E1675A;
+  position: relative;
+  z-index: 1;
+}
+
+.header .add {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 2rem;
+  background: #e13529;
+  box-shadow: 1px 1px 6px -3px #000;
+  line-height: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #ccc;
+  z-index: 100;
+}
+
+.header .add.add-show {
+  animation: opacity-show .4s ease both;
+}
+
+.header .add.add-none {
+  animation: opacity-none .4s ease both;
+}
+
+.header .header-list {
+  width: 5.4rem;
+  height: 100%;
+  float: left;
+  padding: 25px 18px;
+  box-sizing: border-box;
+}
+
+.header .header-list.header-mylist p {
+  font-family: "font-semi";
+}
+
+.header .header-list.header-mylist .icons {
+  width: 4rem;
+  height: 0.6rem;
+  margin-top: 10px;
+}
+
+.header .header-list.header-mylist .icons .icon {
+  width: 33.33%;
+  height: 100%;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+  float: left;
+  line-height: 0.6rem;
+}
+
+.header .header-list.header-mylist .icons .icon .icon-font {
+  margin: 0 2px 0 2px;
+}
+
+.header .header-list.header-mylist .icons .icon-duigou {
+  color: green;
+}
+
+.header .header-list.header-mylist .icons .icon-shengyushijian {
+  color: red;
+}
+
+.header .header-list.header-mylist .icons .icon-today {
+  border: 0;
+}
+
+.header .header-list.header-date {
+  font-family: "font-semi";
+}
+
+.header .header-list.header-date .icon-rili {
+  float: right;
+  font-size: 24px;
+}
+
+.header .header-list.header-date span {
+  line-height: 73px;
+  margin-left: 22px;
+  font-size: 17px;
+}
+
+.inner {
+  height: 16.18rem;
+  background: #363D45;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
+.inner .inner-guides {
+  width: 2px;
+  margin-left: 5px;
+  float: left;
+}
+
+.inner .inner-guides .inner-guide {
+  background: #666;
+}
+
+.inner .inner-guides .inner-guide.icon-font {
+  width: 0.77rem;
+  background: #363D45;
+  position: relative;
+  left: -0.35rem;
+  line-height: 0.77rem;
+  text-align: center;
+  font-size: 18px;
+}
+
+.inner .inner-guides .inner-guide.inner-guide-today {
+  color: #35fff7;
+}
+
+.inner .inner-guides .inner-guide.inner-guide-sure {
+  color: green;
+}
+
+.inner .inner-guides .inner-guide.inner-guide-remain {
+  color: red;
+}
+
+.inner .inner-guides li:nth-child(1) {
+  height: 2.5rem;
+}
+
+.inner .inner-guides li:nth-child(2) {
+  height: 0.77rem;
+}
+
+.inner .inner-guides li:nth-child(3) {
+  height: 7.5rem;
+}
+
+.inner .inner-guides li:nth-child(4) {
+  height: 0.77rem;
+}
+
+.inner .inner-guides li:nth-child(5) {
+  height: 1.57rem;
+}
+
+.inner .inner-guides li:nth-child(6) {
+  height: 0.77rem;
+}
+
+.inner .inner-guides li:nth-child(7) {
+  height: 2.3rem;
+}
+
+.inner .inner-lists {
+  width: 8rem;
+  height: 100%;
+  float: right;
+  padding-top: 45px;
+  box-sizing: border-box;
+}
+
+.inner .inner-lists .inner-list p {
+  color: #666;
+}
+
+.inner .inner-lists .inner-list .top {
+  width: 8rem;
+  height: 1.34rem;
+  background: #22272D;
+  position: relative;
+  line-height: 1.34rem;
+  box-sizing: border-box;
+  padding: 0 15px 0 5px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.inner .inner-lists .inner-list .top .top-guide {
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-right-color: #22272D;
+  position: absolute;
+  left: -16px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.inner .inner-lists .inner-list .top p {
+  float: right;
+  font-size: 12px;
+}
+
+.inner .inner-lists .inner-list .inner-contents {
+  height: 6rem;
+  background: #E7F1F3;
+  overflow: hidden;
+  position: relative;
+}
+
+.inner .inner-lists .inner-list .inner-contents .inner-content {
+  height: 1.5rem;
+  box-sizing: border-box;
+  border-bottom: 1px dashed #ccc;
+  line-height: 1.5rem;
+  padding: 0 6px;
+  background: #E7F1F3;
+  font-family: "font-semi","微软雅黑";
+}
+
+.inner .inner-lists .inner-list .inner-contents .inner-content.delete-inner {
+  font-family: "font-semi","微软雅黑";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+.inner .inner-lists .inner-list .inner-contents .inner-content div {
+  float: left;
+  height: 0.44rem;
+  padding-right: 5px;
+}
+
+.inner .inner-lists .inner-list .inner-contents .inner-content div.title {
+  width: 4.5rem;
+  height: 1.5rem;
+}
+
+.inner .inner-lists .inner-list.inner-list-sure {
+  position: fixed;
+  bottom: 4.3rem;
+}
+
+.inner .inner-lists .inner-list.inner-list-remain {
+  position: fixed;
+  bottom: 2.1rem;
+}
+
+.add-list {
+  width: 100%;
+  height: 16.18rem;
+  background: #ccc;
+  position: fixed;
+  top: 3rem;
+  transform: translate3d(0, -100%, 0);
+}
+
+.add-list.add-list-show {
+  animation: input-show .4s ease both;
+}
+
+.add-list.add-list-none {
+  animation: input-none .4s ease both;
+}
+
+.add-list .add-box {
+  height: 1.5rem;
+}
+
+.add-list .add-box input {
+  font-size: 20px;
+  width: 83%;
+  height: 1.05rem;
+  margin: 0.23rem 0.2rem;
+  border: 1px solid #999;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 0 12px;
+}
+
+.add-list .add-box .button {
+  width: 1.1rem;
+  height: 1.5rem;
+  float: right;
+  font-size: 1.2rem;
+  margin-right: 7px;
+  font-family: "queding";
+  line-height: 1.5rem;
+  color: #444444;
+}
+
+.inner-content.delete:nth-child(1) {
+  animation: xiaoshi 0.8s ease 0.2s both;
+}
+
+.inner-content.delete:nth-child(2) {
+  animation: xiaoshi 0.8s ease 0.4s both;
+}
+
+.inner-content.delete:nth-child(3) {
+  animation: xiaoshi 0.8s ease 0.6s both;
+}
+
+.inner-content.delete:nth-child(4) {
+  animation: xiaoshi 0.8s ease 0.8s both;
+}
+
+.inner-content.delete:nth-child(5) {
+  animation: xiaoshi 0.8s ease 1s both;
+}
+
+.inner-content.delete:nth-child(6) {
+  animation: xiaoshi 0.8s ease 1.2s both;
+}
+
+.inner-content.delete:nth-child(7) {
+  animation: xiaoshi 0.8s ease 1.4s both;
+}
+
+.inner-content.delete:nth-child(8) {
+  animation: xiaoshi 0.8s ease 1.6s both;
+}
+
+.inner-content.delete:nth-child(9) {
+  animation: xiaoshi 0.8s ease 1.8s both;
+}
+
+.inner-content.delete:nth-child(10) {
+  animation: xiaoshi 0.8s ease 2s both;
+}
+
+.inner-content.delete:nth-child(11) {
+  animation: xiaoshi 0.8s ease 2.2s both;
+}
+
+.inner-content.delete:nth-child(12) {
+  animation: xiaoshi 0.8s ease 2.4s both;
+}
+
+@keyframes xiaoshi {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes input-show {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes input-none {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -100, 0);
+  }
+}
+
+@keyframes opacity-none {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes opacity-show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

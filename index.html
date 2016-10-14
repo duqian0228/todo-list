@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="app"> 
+	<link rel="apple-touch-icon" href="image/icon.png">
+	<!-- Add to homescreen for Chrome on Android -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="app">
+	<link rel="icon" sizes="192x192" href="image/icon.png">
+	<title>todo list</title>
+	<script src="./js/jquery.js"></script>
+	<script src="./js/index.js"></script>
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+	<div class="header">
+		<div class="header-list header-mylist">
+			<p>My Dynamic</p>
+			<ul class="icons">
+				<li class="icon icon-sure">
+					<span class="icon-font icon-duigou"></span>
+					<span>9</span>
+				</li>
+				<li class="icon icon-remain">
+					<span class="icon-font icon-shengyushijian"></span>
+					<span class="num">9</span>
+				</li>
+				<li class="icon icon-today">
+					<span class="icon-font icon-quanbu"></span>
+					<span class="num">9</span>
+				</li>
+			</ul>
+		</div>
+		<div class="header-list header-date">
+			<div class="icon-font icon-rili"></div>
+			<span>October 13</span>
+		</div>
+		<div class="add icon-font icon-tianjia"></div>
+	</div>
+    <div class="inner">
+		<ul class="inner-guides">
+			<li class="inner-guide inner-guide1"></li>
+			<li class="inner-guide inner-guide-today icon-font icon-quanbu"></li>
+			<li class="inner-guide inner-guide2"></li>
+			<li class="inner-guide inner-guide-sure icon-font icon-duigou"></li>
+			<li class="inner-guide inner-guide3"></li>
+			<li class="inner-guide inner-guide-remain icon-font icon-shengyushijian"></li>
+			<li class="inner-guide inner-guide4"></li>
+		</ul>
+		<div class="inner-lists">
+			<div class="inner-list">
+				<p>Today</p>
+				<div class="top">Today Dynamic
+					<div class="top-guide"></div>
+					<p>9 TASKS</p>
+				</div>
+				<ul class="inner-contents">
+					<!--<li class="inner-content icon-font icon-jishiben complete">dynamic1</li>-->
+					<!--<li class="inner-content icon-font icon-jishiben icon-guanbigongjulan">dynamic2</li>-->
+					<!--<li class="inner-content icon-font icon-jishiben icon-guanbigongjulan">dynamic3</li>-->
+					<!--<li class="inner-content icon-font icon-jishiben complete">dynamic4</li>-->
+				</ul>
+			</div>
+			<div class="inner-list inner-list-sure">
+				<p>Completed</p>
+				<div class="top">Completed
+					<div class="top-guide"></div>
+					<p>9 TASKS</p>
+				</div>
+			</div>
+			<div class="inner-list inner-list-remain">
+				<p>Uncompleted</p>
+				<div class="top">Uncompleted
+					<div class="top-guide"></div>
+					<p>9 TASKS</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="add-list">
+		<div class="add-box">
+			<input type="text">
+			<div class="button icon-queding"></div>
+		</div>
+	</div>
+</body>
+</html>
